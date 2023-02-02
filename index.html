@@ -22,10 +22,12 @@
   <div id="overlay"></div>
 
   <nav class="flex items-center justify-between">
-    <div class="flex ml-2 items-center">
+
+    <a href="/" class="flex ml-2 items-center">
       <img src="icons/logo.svg" alt="Logo">
       <span class="text-white text-lg ml-2">My Portfolio</span>
-    </div>
+    </a>
+
     <div id="burger-icon" class="cursor-pointer w-7 h-6 mr-1">
       <img src="icons/burger-icon.svg" alt="Burger">
     </div>
@@ -36,10 +38,10 @@
       <img src="icons/close-icon.svg" alt="Close">
     </div>
     <nav class="nav p-4">
-      <a href="#home" class="text-white p-2 hover:bg-gray-600">Home</a>
-      <a href="#portfolio" class="text-white p-2 hover:bg-gray-600">Portfolio</a>
-      <a href="#services" class="text-white p-2 hover:bg-gray-600">Services</a>
-      <a href="#contact" class="text-white p-2 hover:bg-gray-600">Contact</a>
+      <a href="/" class="text-white p-2 hover:bg-gray-600">Home</a>
+      <a href="/portfolio" class="text-white p-2 hover:bg-gray-600">Portfolio</a>
+      <a href="/services" class="text-white p-2 hover:bg-gray-600">Services</a>
+      <a href="/contact" class="text-white p-2 hover:bg-gray-600">Contact</a>
     </nav>
   </div>
 
@@ -103,6 +105,7 @@
 </footer>
 
 <script type="module" defer src="scripts/main.js"></script>
+<script type="module" defer src="scripts/router.js"></script>
 </body>
 
 </html>

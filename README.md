@@ -20,7 +20,7 @@ A free template for everyone to download, update and enjoy as his/her own websit
 
 * Swiper
 
-## Structure and organization
+## Structure and organization - TBD
 
 ### Folders
 
