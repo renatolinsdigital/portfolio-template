@@ -1,0 +1,90 @@
+/* Overall layout */
+
+body {
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+#content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Drawer menu and overlay */
+
+#drawer-menu {
+  top: 0;
+  z-index: 10;
+  width: 300px;
+  height: 100%;
+  right: -300px;
+  position: fixed;
+  will-change: transform;
+  transform: translateX(0);
+  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-out;
+}
+
+.open-menu #drawer-menu {
+  transform: translateX(-300px);
+}
+
+.nav {
+  display: flex;
+  user-select: none;
+  flex-direction: column;
+}
+
+.nav a {
+  border-radius: 2px;
+  transition: all .2s ease;
+}
+
+#overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  opacity: 0;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  transition: 3s all ease;
+  animation: fadein .2s linear forwards;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.open-menu #overlay {
+  display: flex;
+}
+
+#close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Social Links/Icons */
+
+.social {
+  display: flex;
+}
+
+.social a {
+  padding: 10px;
+}
+
+.social img,
+#close-icon img,
+#burger-icon img {
+  transition: all .2s ease;
+}
+
+.social a:hover img,
+#close-icon:hover img,
+#burger-icon:hover img {
+  filter: invert(20%);
+}

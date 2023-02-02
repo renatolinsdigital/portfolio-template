@@ -1,0 +1,5 @@
+@media screen and (max-width: 720px) {
+  .open-menu #drawer-menu {
+    width: 100%;
+  }
+}
