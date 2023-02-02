@@ -6,30 +6,30 @@ A free template for everyone to download, update and enjoy as his/her own websit
 
 ## What was used
 
-- Stack
+### Stack
 
 * HTML
 * CSS
 * Javascript
 
-- CSS Frameworks
+### CSS Frameworks
 
 * Tailwind CSS
 
-- Libraries:
+### Libraries:
 
 * Swiper
 
 ## Structure and organization
 
-- Folders
+### Folders
 
 __icons__: Where icons are places, preferably in .svg format
 __vendor__: Where third party libraries/frameworks are placed
 __scripts__: Where Javascript is stored
 __images__: Where images are stored, preferably in .png or .webp format
 
-- Files
+### Files
 
 __index.html__: The entry point for the site, a file that calls all other files
 __main.js__: The main script of the website, handles all website behavior and call other scripts
