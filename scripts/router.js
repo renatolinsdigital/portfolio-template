@@ -10,10 +10,12 @@ const handleNavigation = async () => {
 const route = (event) => {
   event = event || window.event;
   event.preventDefault();
-  window.history.pushState({}, "", event.target.href);
+  const target = event.target.closest("a") || event.target;
+  window.history.pushState({}, "", target.href);
   handleNavigation();
 }
 
 window.onpopstate = handleNavigation;
 handleNavigation();
+
 export default route;

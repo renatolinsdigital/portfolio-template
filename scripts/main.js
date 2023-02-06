@@ -1,6 +1,9 @@
 import route from './router.js';
 
-const toggleNav = () => document.body.classList.toggle("open-menu");
+const toggleNav = (event) => {
+  const isHomeLink = event.target.closest("#home-link");
+  if (!isHomeLink) document.body.classList.toggle("open-menu");
+}
 
 window.addEventListener("load", function () {
 
@@ -16,7 +19,7 @@ window.addEventListener("load", function () {
    // Attaches links to the routing function
    const links = document.querySelectorAll('nav a');
   links.forEach(link => link.addEventListener('click', route));
-  // links.forEach(link => link.addEventListener('click', toggleNav));
+  links.forEach(link => link.addEventListener('click', toggleNav));
 
   //Getting current year
   const yearText = document.getElementById("currentYear");
