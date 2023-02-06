@@ -75,8 +75,11 @@ body {
 
 .social a {
   padding: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
 }
 
+.social a,
 .social img,
 #close-icon img,
 #burger-icon img {
@@ -86,5 +89,5 @@ body {
 .social a:hover img,
 #close-icon:hover img,
 #burger-icon:hover img {
-  filter: invert(20%);
+  filter: invert(80%);
 }
