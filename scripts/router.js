@@ -14,7 +14,7 @@ const handleNavigation = async () => {
   const pageData = data[routeName];
   const parsedHtml = interpolate(html, pageData)
  
-  document.getElementById("content").innerHTML = parsedHtml;
+  document.getElementById("main").innerHTML = parsedHtml;
 }
 
 const route = (event) => {

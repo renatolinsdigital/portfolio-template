@@ -7,6 +7,10 @@
   vertical-align: baseline;
 }
 
+a {
+  transition: all .2s ease;
+}
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

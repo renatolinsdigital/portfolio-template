@@ -1,0 +1,24 @@
+:root {
+  --primary-color: #1F2937;
+  --primary-color-light: #2c3e50;
+
+  --accent-color-1: #F6C96B;
+  --accent-color-2: #3D8B7E;
+  --off-white: #F3F3F3;
+}
+
+.bg-default {
+  background-color: var(--primary-color);
+}
+
+.bg-alternative {
+  background-color: var(--primary-color-light);
+}
+
+.menu-link:hover {
+  background-color: var(--primary-color-light);
+}
+
+.text-default {
+  color: var(--off-white);
+}
