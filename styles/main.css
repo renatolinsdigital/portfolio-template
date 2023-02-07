@@ -74,8 +74,8 @@ body {
 }
 
 .social a {
-  padding: 10px;
-  border: 2px solid white;
+  padding: 12px;
+  border: 1px solid white;
   border-radius: 50%;
 }
 
@@ -87,7 +87,10 @@ body {
 }
 
 .social a:hover img,
-#close-icon:hover img,
 #burger-icon:hover img {
   filter: invert(80%);
+}
+
+#close-icon:hover img {
+  filter: invert(20%);
 }

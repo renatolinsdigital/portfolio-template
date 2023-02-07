@@ -20,6 +20,10 @@ A free template for everyone to download, update and enjoy as his/her own websit
 
 * Swiper
 
+### Favicon
+
+If you want to generate a fav icon, upload a new image to favicon.io. Then download and replace icons in the __fav-icon__ folder
+
 ## Structure and organization - TBD
 
 ### Folders
