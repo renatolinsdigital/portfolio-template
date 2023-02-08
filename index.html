@@ -8,13 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="A Portfolio website made with HTML, CSS and JavaScript" />
 
-  <title>My Portfolio</title><!--Website title will be recognized before loading css-->
+  <!--Website title will be recognized before loading css-->
+  <title>My Portfolio</title>
 
+  <!--Pay attention to the order that style sheets will be loaded, this will impact overrides-->
   <link rel="stylesheet" href="./styles/reset.css" type="text/css">
-  <link rel="stylesheet" href="./styles/theme.css" type="text/css">
-  <link rel="stylesheet" href="./styles/animations.css" type="text/css">
-  <link rel="stylesheet" href="./styles/main.css" type="text/css">
   <link rel="stylesheet" href="vendor/tailwind.min.css">
+  <link rel="stylesheet" href="./styles/animations.css" type="text/css">
+  <link rel="stylesheet" href="./styles/theme.css" type="text/css">
+  <link rel="stylesheet" href="./styles/main.css" type="text/css">
   <link rel="stylesheet" href="./styles/media-queries.css" type="text/css">
 
   <link rel="apple-touch-icon" sizes="180x180" href="fav-icon/apple-touch-icon.png">
@@ -23,80 +25,77 @@
   <link rel="manifest" href="fav-icon/site.webmanifest">
 </head>
 
-<body class="font-base text-base"></body><!--Where the base font size is defined-->
+<body>
 
-<header class="p-4 bg-default">
+  <header class="p-4 bg-default">
 
-  <div id="overlay"></div>
+    <div id="overlay"></div>
 
-  <nav class="flex items-center justify-between">
+    <nav class="flex items-center justify-between">
 
-    <a href="/" id="home-link" class="flex ml-2 items-center">
-      <img src="images/logo.svg" alt="Logo">
-      <span class="text-lg ml-2">My Portfolio</span>
-    </a>
+      <a href="/" id="home-link" class="flex ml-2 items-center">
+        <img src="images/logo.svg" alt="Logo">
+        <span class="text-lg ml-2">My Portfolio</span>
+      </a>
 
-    <div id="burger-icon" class="cursor-pointer w-7 h-6 mr-1">
-      <img src="icons/burger.svg" alt="Burger">
-    </div>
-  </nav>
-
-  <div id="drawer-menu" class="bg-default pt-12 flex justify-between flex-col">
-    <div id="close-icon" class="cursor-pointer w-7 h-6 mr-1">
-      <img src="icons/close.svg" alt="Close">
-    </div>
-    <nav class="nav p-4">
-      <a href="/" class="p-2 menu-link">Home</a>
-      <a href="/portfolio" class="p-2 menu-link">Portfolio</a>
-      <a href="/services" class="p-2 menu-link">Services</a>
-      <a href="/contact" class="p-2 menu-link">Contact</a>
+      <div id="burger-icon" class="cursor-pointer w-7 h-6 mr-1">
+        <img src="icons/burger.svg" alt="Burger">
+      </div>
     </nav>
 
-    <p class="text-gray-200 p-4 text-sm text-center">Created by
-      <a href="https://www.linkedin.com/in/renatolinsdigital/" target="_blank" class="ml-0.5">Renato
-        Lins
+    <div id="drawer-menu" class="bg-default pt-12 flex justify-between flex-col">
+      <div id="close-icon" class="cursor-pointer w-7 h-6 mr-1">
+        <img src="icons/close.svg" alt="Close">
+      </div>
+      <nav class="nav p-4">
+        <a href="/" class="p-2 menu-link">Home</a>
+        <a href="/portfolio" class="p-2 menu-link">Portfolio</a>
+        <a href="/services" class="p-2 menu-link">Services</a>
+        <a href="/contact" class="p-2 menu-link">Contact</a>
+      </nav>
+
+      <p class="text-gray-200 p-4 text-sm text-center">Created by
+        <a href="https://www.linkedin.com/in/renatolinsdigital/" target="_blank" class="ml-0.5">Renato
+          Lins
+        </a>
+      </p>
+
+    </div>
+
+  </header>
+
+  <main id="main"></main> <!--Dynamic data will be injected here-->
+
+  <footer class="bg-default pt-10 flex flex-col">
+    <div class="flex flex-col items-center">
+      <img src="images/logo.svg" alt="Logo" class="w-20 mb-4">
+      <p class="mb-7 w-full md:w-1/2 px-8 flex text-center">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna non tincidunt efficitur, metus metus
+        congue elit, eget dictum sem sapien vel odio. Proin sollicitudin mi vel mi sollicitudin, et commodo nisi congue.
+      </p>
+    </div>
+    <div class="social justify-center pb-5">
+      <a href=" https://facebook.com" target="_blank" class="mx-2 hover:bg-white">
+        <img src="icons/facebook.svg" alt="Facebook Icon">
       </a>
+      <a href="https://instagram.com" target="_blank" class="mx-2 hover:bg-white">
+        <img src="icons/instagram.svg" alt="Instagram Icon">
+      </a>
+      <a href="https://twitter.com" target="_blank" class="mx-2 hover:bg-white">
+        <img src="icons/twitter.svg" alt="Twitter Icon">
+      </a>
+      <a href="https://linkedin.com" target="_blank" class="mx-2 hover:bg-white">
+        <img src="icons/linkedin.svg" alt="Linkedin Icon">
+      </a>
+    </div>
+    <p class="flex pb-6 pt-10 justify-center">
+      &copy; <span id="currentYear" class="mr-1"></span>- Your Portfolio. All rights reserved.
     </p>
+  </footer>
 
-  </div>
+  <script type="module" defer src="scripts/main.js"></script>
+  <script type="module" defer src="scripts/router.js"></script>
 
-</header>
-
-<main id="main"></main> <!--Dynamic data will be injected here-->
-
-<footer class="bg-default pt-10 flex flex-col">
-  <div class="flex flex-col items-center">
-    <img src="images/logo.svg" alt="Logo" class="w-20 mb-4">
-    <p class="mb-7 w-full md:w-1/2 px-8 flex text-center">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna non tincidunt efficitur, metus metus
-      congue elit, eget dictum sem sapien vel odio. Proin sollicitudin mi vel mi sollicitudin, et commodo nisi congue.
-    </p>
-  </div>
-  <div class="social justify-center pb-5">
-    <a href=" https://facebook.com" target="_blank" class="mx-2 hover:bg-white">
-      <img src="icons/facebook.svg" alt="Facebook Icon">
-    </a>
-    <a href="https://instagram.com" target="_blank" class="mx-2 hover:bg-white">
-      <img src="icons/instagram.svg" alt="Instagram Icon">
-    </a>
-    <a href="https://twitter.com" target="_blank" class="mx-2 hover:bg-white">
-      <img src="icons/twitter.svg" alt="Twitter Icon">
-    </a>
-    <a href="https://linkedin.com" target="_blank" class="mx-2 hover:bg-white">
-      <img src="icons/linkedin.svg" alt="Linkedin Icon">
-    </a>
-  </div>
-  <p class="flex pb-6 pt-10 justify-center">
-    &copy; <span id="currentYear" class="mr-1"></span>- Your Portfolio. All rights reserved.
-  </p>
-</footer>
-
-
-
-
-
-<script type="module" defer src="scripts/main.js"></script>
-<script type="module" defer src="scripts/router.js"></script>
 </body>
 
 </html>
