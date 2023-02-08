@@ -62,8 +62,8 @@ body {
 }
 
 .nav a {
+  padding: 10px 15px;
   border-radius: 2px;
-  transition: all .2s ease;
 }
 
 #overlay {

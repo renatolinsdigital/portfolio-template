@@ -1,10 +1,30 @@
-:root {
-  --primary-color: #1F2937;
-  --primary-color-light: #2c3e50;
+/* = COLORS = */
 
-  --accent-color-1: #F6C96B;
-  --accent-color-2: #3D8B7E;
-  --off-white: #F3F3F3;
+:root {
+  /* identity */
+  --primary-color: #1F2937;
+  --secondary-color: #3E5775;
+  --tertiary-color: #7CAAB8;
+  --accent-color-1: #FFC107;
+  --accent-color-2: #00BCD4;
+
+  /* neutrals */
+  --snow1: #FBFCFC;
+  --snow2: #F4F6F6;
+  --gray1: #E1E2E2;
+  --gray2: #C4C4C5;
+  --gray3: #A6A7A8;
+  --gray4: #888A8B;
+  --gray5: #6A6D6E;
+  --gray6: #4D4F51;
+  --dark: #252729;
+  --darker: #18191A;
+}
+
+/* = COLORS = */
+
+:not(a) {
+  color: var(--snow2);
 }
 
 .bg-default {
@@ -12,13 +32,18 @@
 }
 
 .bg-alternative {
-  background-color: var(--primary-color-light);
+  background-color: var(--secondary-color);
 }
 
 .menu-link:hover {
-  background-color: var(--primary-color-light);
+  background-color: var(--secondary-color);
 }
 
-.text-default {
-  color: var(--off-white);
+a, p a {
+  color: var(--accent-color-2);
+  transition: all .2s ease;
+}
+
+a:hover {
+  filter: invert(10%);
 }
