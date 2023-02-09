@@ -1,4 +1,4 @@
-/* Overall layout */
+/* Layout */
 
 :root {
   --max-page-width: 1280px;
@@ -10,13 +10,13 @@ body {
   grid-template-rows: min-content 1fr min-content;
 }
 
-#main {
-  flex: 1;
+body.is-home {
   display: flex;
+  overflow: auto;
   flex-direction: column;
 }
 
-.content {
+.page, .container {
   flex: 1;
   width: 100%;
   height: 100%;
@@ -24,16 +24,32 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  max-width: var(--max-page-width);
 }
 
-.page {
-  flex: 1;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  max-width: var(--max-page-width);
+.page.full, section.full {
+  padding: 0;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+/* Helper classes */
+
+.is-hidden {
+  display: none;
+}
+
+.subtitle {
+  padding: .9rem;
+  font-size: 1rem;
+  letter-spacing: .4rem;
+  color: var(--dirty-snow);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--dirty-snow);
+}
+
+.text-alternative {
+  color: var(--dirty-snow);
 }
 
 /* Drawer menu and overlay */
@@ -62,9 +78,10 @@ body {
 }
 
 .nav a {
-  padding: 10px 15px;
-  border-radius: 2px;
+  font-size: 1.1rem;
   color: var(--snow2);
+  border-radius: .2rem;
+  padding: 1rem 1.5rem;
 }
 
 #overlay {
@@ -79,7 +96,7 @@ body {
   position: fixed;
   transition: 3s all ease;
   animation: fadein .2s linear forwards;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--overlay-transparency);
 }
 
 .open-menu #overlay {
@@ -87,8 +104,8 @@ body {
 }
 
 #close-icon {
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
   position: absolute;
 }
 
@@ -101,7 +118,11 @@ body {
 .social a {
   padding: 12px;
   border-radius: 50%;
-  border: 1px solid white;
+  border: 1px solid var(--white);
+}
+
+.social a:hover {
+  background-color: var(--white);
 }
 
 .social img,
@@ -117,4 +138,19 @@ body {
 #close-icon:hover img,
 #burger-icon:hover img {
   filter: invert(20%);
+}
+
+/* Page: Home */
+
+.welcome {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  filter: contrast(0.9);
+  background-size: cover;
+  justify-content: center;
+  background-position: top;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 138px);
+  background-image: url('../images/home-bg.jpg');
 }

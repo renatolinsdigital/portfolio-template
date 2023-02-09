@@ -25,6 +25,7 @@ html, body {
   --accent-color-2: #00BCD4;
 
   /* neutrals */
+  --white: #FFFFFF;
   --snow1: #FBFCFC;
   --snow2: #F4F6F6;
   --gray1: #E1E2E2;
@@ -35,9 +36,13 @@ html, body {
   --gray6: #4D4F51;
   --dark: #252729;
   --darker: #18191A;
+
+  --dirty-snow: #c7ecf7;
+
+  --overlay-transparency: rgba(0, 0, 0, 0.3);
 }
 
-/* = COLORS = */
+/* = COLOR USAGE = */
 
 :not(a) {
   color: var(--snow2);
@@ -45,6 +50,10 @@ html, body {
 
 .bg-default {
   background-color: var(--primary-color);
+}
+
+.text-alternative {
+  color: var(--gray2);
 }
 
 .bg-alternative {

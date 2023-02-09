@@ -12,7 +12,17 @@ const handleNavigation = async () => {
   // Adding data according to route and page names
   const routeName = route.replace(/\/pages\/|\.html/g, "");
   const pageData = data[routeName];
-  const parsedHtml = interpolate(html, pageData)
+  const parsedHtml = interpolate(html, pageData);
+
+  // Dealing with classes that will impact home page only
+  const extraInfo = document.getElementById('extra-info');
+  extraInfo.classList.add("is-hidden");
+  document.body.classList.add("is-home");
+  
+  if (routeName !== 'home') {
+    extraInfo.classList.remove("is-hidden");
+    document.body.classList.remove("is-home");
+  }
  
   document.getElementById("main").innerHTML = parsedHtml;
 }
@@ -22,8 +32,7 @@ const route = (event) => {
   event.preventDefault();
   const target = event.target.closest("a") || event.target;
   window.history.pushState({}, "", target.href);
-  handleNavigation();
-  
+  handleNavigation();  
 }
 
 window.onpopstate = handleNavigation;
