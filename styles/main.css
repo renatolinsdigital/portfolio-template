@@ -152,5 +152,5 @@ body.is-home {
   background-position: top;
   background-repeat: no-repeat;
   min-height: calc(100vh - 138px);
-  background-image: url('../images/home-bg.jpg');
+  background-image: url('../images/home-bg.png');
 }
