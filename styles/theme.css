@@ -1,17 +1,21 @@
-/* = TYPOGRAPHY = */
-
 /* 
 
-For this website, default tailwind's font will be considered. If you want to 
+1) This theme will not import any dependency or variable from other files. This
+will help shareability between sites using this same approach
+
+2) For this website, default tailwind's font will be considered. If you want to 
 use a different font (e.g Roboto), uncomment the line below and set your own font
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
 
+And then you'll use it like so: html, body { font-family: 'Roboto', sans-serif; }
+
 */
+
+/* = TYPOGRAPHY = */
 
 html, body {
   font-size: 16px;
-  /* font-family: 'Roboto', sans-serif; */
 }
 
 /* = COLOR PALETTE = */
@@ -19,6 +23,7 @@ html, body {
 :root {
   /* identity */
   --primary-color: #1F2937;
+  --primary-dark-color: #111820;
   --secondary-color: #3E5775;
   --tertiary-color: #7CAAB8;
   --accent-color-1: #FFC107;
@@ -52,6 +57,10 @@ html, body {
   background-color: var(--primary-color);
 }
 
+.bg-dark {
+  background-color: var(--primary-dark-color);
+}
+
 .text-alternative {
   color: var(--gray2);
 }
@@ -71,4 +80,19 @@ a, p a {
 
 a:hover {
   filter: invert(10%);
+}
+
+.text-alternative {
+  color: var(--dirty-snow);
+}
+
+/* = UI ELEMENTS (VISUAL COMPONENTS MAPPED) = */
+
+.subtitle {
+  padding: .9rem;
+  font-size: 1rem;
+  letter-spacing: .4rem;
+  color: var(--dirty-snow);
+  text-transform: uppercase;
+  border-bottom: .0625rem solid var(--dirty-snow);
 }

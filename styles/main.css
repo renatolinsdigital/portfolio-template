@@ -2,6 +2,7 @@
 
 :root {
   --max-page-width: 1280px;
+  --site-header-height: 8.63rem;
 }
 
 body {
@@ -14,6 +15,13 @@ body.is-home {
   display: flex;
   overflow: auto;
   flex-direction: column;
+}
+
+body.is-home>header {
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
 }
 
 .page, .container {
@@ -33,25 +41,6 @@ body.is-home {
   max-width: 100%;
 }
 
-/* Helper classes */
-
-.is-hidden {
-  display: none;
-}
-
-.subtitle {
-  padding: .9rem;
-  font-size: 1rem;
-  letter-spacing: .4rem;
-  color: var(--dirty-snow);
-  text-transform: uppercase;
-  border-bottom: 1px solid var(--dirty-snow);
-}
-
-.text-alternative {
-  color: var(--dirty-snow);
-}
-
 /* Drawer menu and overlay */
 
 #drawer-menu {
@@ -63,8 +52,8 @@ body.is-home {
   position: fixed;
   will-change: transform;
   transform: translateX(0);
-  transition: all 0.3s ease-in-out;
-  transition: transform 0.3s ease-out;
+  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease-out;
 }
 
 .open-menu #drawer-menu {
@@ -80,8 +69,8 @@ body.is-home {
 .nav a {
   font-size: 1.1rem;
   color: var(--snow2);
-  border-radius: .2rem;
-  padding: 1rem 1.5rem;
+  border-radius: var(--px4);
+  padding: var(--px16) var(--px24);
 }
 
 #overlay {
@@ -104,8 +93,8 @@ body.is-home {
 }
 
 #close-icon {
-  top: 30px;
-  right: 30px;
+  top: var(--px30);
+  right: var(--px30);
   position: absolute;
 }
 
@@ -116,9 +105,9 @@ body.is-home {
 }
 
 .social a {
-  padding: 12px;
   border-radius: 50%;
-  border: 1px solid var(--white);
+  padding: var(--px12);
+  border: var(--px2) solid var(--white);
 }
 
 .social a:hover {
@@ -142,6 +131,11 @@ body.is-home {
 
 /* Page: Home */
 
+.home.page {
+  padding-top: var(--site-header-height);
+  background-color: var(--primary-dark-color);
+}
+
 .welcome {
   flex: 1;
   display: flex;
@@ -151,6 +145,6 @@ body.is-home {
   justify-content: center;
   background-position: top;
   background-repeat: no-repeat;
-  min-height: calc(100vh - 138px);
   background-image: url('../images/home-bg.png');
+  min-height: calc(100vh - var(--site-header-height));
 }
