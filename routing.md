@@ -1,6 +1,6 @@
 # Handling Client-side Routing with Netlify
 
-This website uses JavaScript to manage its routes and display the appropriate content for each URL. Since the hosting service suggested is Netlify, we need to configure the server to redirect all requests to index.html, allowing the JavaScript code to handle the client-side routing.
+This website uses JavaScript to manage its routes and display the appropriate content for each URL. Since the hosting service suggested is Netlify, we need to configure the server to redirect all requests to __index.html__, allowing the JavaScript code to handle the client-side routing.
 
 ## The _redirects File
 

@@ -78,8 +78,8 @@ body.is-home>header {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 5;
   opacity: 0;
+  z-index: 5;
   display: none;
   cursor: pointer;
   position: fixed;
