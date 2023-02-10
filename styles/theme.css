@@ -1,17 +1,3 @@
-/* 
-
-1) This theme will not import any dependency or variable from other files. This
-will help shareability between sites using this same approach
-
-2) For this website, default tailwind's font will be considered. If you want to 
-use a different font (e.g Roboto), uncomment the line below and set your own font
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
-
-And then you'll use it like so: html, body { font-family: 'Roboto', sans-serif; }
-
-*/
-
 /* = TYPOGRAPHY = */
 
 html, body {
