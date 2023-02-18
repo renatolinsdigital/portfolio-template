@@ -76,6 +76,12 @@ This website template is free for you to download, modify, and use for your own 
 * Page content stored in the data folder for each individual page
 * Homepage image (stored in the images folder and defined in main.css)
 
+### General tips
+
+* Try and use compressed images when you have to add photos. Images can be compressed/optimized in services like iloveimg.com
+* Whenever you have to use an icon, consider using .svg format as the scale without loosing resolution, which is good for monitors with higher resolutions
+* Always have a favorite icon configured as it will make your website more identifiable and give a professional touch. You can generate fav icons in services like favicon.io
+
 Feel free to make the necessary adjustments to fit your needs!
 
 
