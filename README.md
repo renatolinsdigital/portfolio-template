@@ -78,9 +78,9 @@ This website template is free for you to download, modify, and use for your own 
 
 ### General tips
 
-* Try and use compressed images when you have to add photos. Images can be compressed/optimized in services like iloveimg.com
-* Whenever you have to use an icon, consider using .svg format as the scale without loosing resolution, which is good for monitors with higher resolutions
-* Always have a favorite icon configured as it will make your website more identifiable and give a professional touch. You can generate fav icons in services like favicon.io
+* Compress your images to reduce their file size and improve your website's loading speed. Services like iloveimg.com can help you optimize your images without sacrificing quality
+* Whenever possible, use .svg icons instead of other file formats. SVGs are scalable and won't lose quality even on high-resolution monitors
+* Make sure to include a favorite icon for your website. A well-designed icon can make your site more recognizable and add a professional touch. You can easily generate a favicon using services like favicon.io
 
 Feel free to make the necessary adjustments to fit your needs!
 
