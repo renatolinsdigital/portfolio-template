@@ -81,7 +81,6 @@ This website template is free for you to download, modify, and use for your own 
 * Compress your images to reduce their file size and improve your website's loading speed. Services like iloveimg.com can help you optimize your images without sacrificing quality
 * Whenever possible, use .svg icons instead of other file formats. SVGs are scalable and won't lose quality even on high-resolution monitors
 * Make sure to include a favorite icon for your website. A well-designed icon can make your site more recognizable and add a professional touch. You can easily generate a favicon using services like favicon.io
-* Once your website is uploaded, it's a good idea to check its performance using Google's PageSpeed Insights tool (pagespeed.web.dev). This tool analyzes your website's loading speed and provides suggestions for improving its performance. By following these recommendations, you can ensure that your website loads quickly and provides a better user experience for your visitors 
 
 Feel free to make the necessary adjustments to fit your needs!
 
