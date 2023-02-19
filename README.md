@@ -81,7 +81,7 @@ This website template is free for you to download, modify, and use for your own 
 * Compress your images to reduce their file size and improve your website's loading speed. Services like iloveimg.com can help you optimize your images without sacrificing quality
 * Whenever possible, use .svg icons instead of other file formats. SVGs are scalable and won't lose quality even on high-resolution monitors
 * Make sure to include a favorite icon for your website. A well-designed icon can make your site more recognizable and add a professional touch. You can easily generate a favicon using services like favicon.io
-* The idea of this website template is to be as simple as possible, yet being professional. It means it is well constructed but it can be improved in several ways, such as using Typescript instead of Javascript, using Sass instead of plain CSS, etc. Other than that, this project doesn't feature a bundling(build) configuration, so if you want to improve score in services such as google page speed insights, you must consider bundlers such as Vite
+* The goal of this website template is to be both simple and professional in design. While the site is well-constructed, there are several ways it could be improved. For instance, using Typescript instead of Javascript, or utilizing Sass instead of plain CSS could provide additional benefits. Additionally, the project currently lacks a bundling (build) configuration. If you wish to improve your website's score in services such as Google PageSpeed Insights, it is recommended to consider bundlers such as Vite. This can help to optimize your website's loading speed and overall performance, resulting in a better user experience.
 
 Feel free to make the necessary adjustments to fit your needs!
 
