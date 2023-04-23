@@ -6,6 +6,7 @@ const toggleNav = (event) => {
 }
 
 window.addEventListener("load", function () {
+  console.log(why());
 
     // Menu toggling actions
   const overlay = document.getElementById('overlay');

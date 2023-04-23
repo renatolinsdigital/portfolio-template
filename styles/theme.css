@@ -1,6 +1,7 @@
 /* = TYPOGRAPHY = */
 
-html, body {
+html,
+body {
   font-size: 16px;
 }
 
@@ -8,28 +9,26 @@ html, body {
 
 :root {
   /* identity */
-  --primary-color: #1F2937;
+  --primary-color: #1f2937;
+  --tertiary-color: #7caab8;
+  --accent-color-1: #ffc107;
+  --accent-color-2: #00bcd4;
+  --secondary-color: #3e5775;
   --primary-dark-color: #111820;
-  --secondary-color: #3E5775;
-  --tertiary-color: #7CAAB8;
-  --accent-color-1: #FFC107;
-  --accent-color-2: #00BCD4;
 
   /* neutrals */
-  --white: #FFFFFF;
-  --snow1: #FBFCFC;
-  --snow2: #F4F6F6;
-  --gray1: #E1E2E2;
-  --gray2: #C4C4C5;
-  --gray3: #A6A7A8;
-  --gray4: #888A8B;
-  --gray5: #6A6D6E;
-  --gray6: #4D4F51;
+  --white: #ffffff;
+  --snow1: #fbfcfc;
+  --snow2: #f4f6f6;
+  --gray1: #e1e2e2;
+  --gray2: #c4c4c5;
+  --gray3: #a6a7a8;
+  --gray4: #888a8b;
+  --gray5: #6a6d6e;
+  --gray6: #4d4f51;
   --dark: #252729;
-  --darker: #18191A;
-
+  --darker: #18191a;
   --dirty-snow: #c7ecf7;
-
   --overlay-transparency: rgba(0, 0, 0, 0.3);
 }
 
@@ -59,9 +58,10 @@ html, body {
   background-color: var(--secondary-color);
 }
 
-a, p a {
+a,
+p a {
   color: var(--accent-color-2);
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
 
 a:hover {
@@ -75,10 +75,10 @@ a:hover {
 /* = UI ELEMENTS (VISUAL COMPONENTS MAPPED) = */
 
 .subtitle {
-  padding: .9rem;
+  padding: 0.9rem;
   font-size: 1rem;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
   color: var(--dirty-snow);
   text-transform: uppercase;
-  border-bottom: .0625rem solid var(--dirty-snow);
+  border-bottom: 0.0625rem solid var(--dirty-snow);
 }
