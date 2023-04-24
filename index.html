@@ -1,107 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Renato Lins" />
+    <meta name="keywords" content="Portfolio, template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A Portfolio website made with HTML, CSS and JavaScript" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="author" content="Renato Lins" />
-  <meta name="keywords" content="Portfolio, template" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A Portfolio website made with HTML, CSS and JavaScript" />
+    <!--Website title will be recognized before loading css-->
+    <title>My Portfolio Website</title>
 
-  <!--Website title will be recognized before loading css-->
-  <title>My Portfolio</title>
+    <!--Pay attention to the order that style sheets will be loaded, this will impact overrides-->
+    <link rel="stylesheet" href="vendor/tailwind.min.css" />
+    <link rel="stylesheet" href="./styles/reset.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/animations.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/theme.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/global.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/helpers.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/media-queries.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/pages.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/ui-elements.css" type="text/css" />
 
-  <!--Pay attention to the order that style sheets will be loaded, this will impact overrides-->
-  <link rel="stylesheet" href="./styles/reset.css" type="text/css">
-  <link rel="stylesheet" href="vendor/tailwind.min.css">
-  <link rel="stylesheet" href="./styles/animations.css" type="text/css">
-  <link rel="stylesheet" href="./styles/theme.css" type="text/css">
-  <link rel="stylesheet" href="./styles/main.css" type="text/css">
-  <link rel="stylesheet" href="./styles/helpers.css" type="text/css">
-  <link rel="stylesheet" href="./styles/media-queries.css" type="text/css">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="fav-icon/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="fav-icon/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="fav-icon/favicon-16x16.png" />
+    <link rel="manifest" href="fav-icon/site.webmanifest" />
+  </head>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="fav-icon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="fav-icon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="fav-icon/favicon-16x16.png">
-  <link rel="manifest" href="fav-icon/site.webmanifest">
-</head>
+  <body>
+    <header class="bg-dark p-4">
+      <div id="overlay"></div>
 
-<body>
+      <nav class="flex items-center justify-between py-7 px-5">
+        <a href="/" id="home-link" class="flex items-center">
+          <img src="images/logo.svg" alt="Logo" width="50" />
+          <span class="text-lg ml-1 uppercase font-bold text-3xl"
+            >Logo text</span
+          >
+        </a>
 
-  <header class="bg-dark p-4">
-
-    <div id="overlay"></div>
-
-    <nav class="flex items-center justify-between py-7 px-5">
-
-      <a href="/" id="home-link" class="flex items-center">
-        <img src="images/logo.svg" alt="Logo" width="50">
-        <span class="text-lg ml-1 uppercase font-bold text-3xl">Logo text</span>
-      </a>
-
-      <div id="burger-icon" class="cursor-pointer w-7 h-6">
-        <img src="icons/burger.svg" alt="Burger">
-      </div>
-    </nav>
-
-    <div id="drawer-menu" class="bg-default pt-12 flex justify-between flex-col">
-      <div id="close-icon" class="cursor-pointer w-7 h-6 mr-1">
-        <img src="icons/close.svg" alt="Close">
-      </div>
-      <nav class="nav px-4 pt-10">
-        <a href="/" class="menu-link">Home</a>
-        <a href="/portfolio" class="menu-link">Portfolio</a>
-        <a href="/services" class="menu-link">Services</a>
-        <a href="/contact" class="menu-link">Contact</a>
+        <div id="burger-icon" class="cursor-pointer w-7 h-6">
+          <img src="icons/burger.svg" alt="Burger" />
+        </div>
       </nav>
 
-      <p class="text-gray-200 p-4 text-sm text-center">Created by
-        <a href="https://www.linkedin.com/in/renatolinsdigital/" target="_blank" class="ml-0.5">
-          Renato Lins
-        </a>
-      </p>
+      <div
+        id="drawer-menu"
+        class="bg-default pt-12 flex justify-between flex-col">
+        <div id="close-icon" class="cursor-pointer w-7 h-6 mr-1">
+          <img src="icons/close.svg" alt="Close" />
+        </div>
+        <nav class="nav pt-10">
+          <a href="/" class="menu-link">Home</a>
+          <a href="/portfolio" class="menu-link">Portfolio</a>
+          <a href="/services" class="menu-link">Services</a>
+          <a href="/contact" class="menu-link">Contact</a>
+        </nav>
 
-    </div>
-
-  </header>
-
-  <main id="main"></main> <!--Dynamic data will be injected here-->
-
-  <footer class="bg-default flex flex-col">
-    <div id="extra-info" class="is-hidden">
-      <div class="flex flex-col items-center">
-        <img src="images/logo.svg" alt="Logo" class="w-20 mb-4">
-        <p class="mb-7 w-full md:w-1/2 px-8 flex text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, magna non tincidunt efficitur,
-          metus metus congue elit, eget dictum sem sapien vel odio. Proin sollicitudin mi vel mi sollicitudin,
-          et commodo nisi congue.
+        <p class="text-gray-200 p-4 text-sm text-center">
+          Created by
+          <a
+            href="https://www.linkedin.com/in/renatolinsdigital/"
+            target="_blank"
+            class="ml-0.5">
+            Renato Lins
+          </a>
         </p>
       </div>
-      <div class="social justify-center pb-8">
-        <a href=" https://facebook.com" target="_blank" class="mx-2">
-          <img src="icons/facebook.svg" alt="Facebook Icon">
-        </a>
-        <a href="https://instagram.com" target="_blank" class="mx-2">
-          <img src="icons/instagram.svg" alt="Instagram Icon">
-        </a>
-        <a href="https://twitter.com" target="_blank" class="mx-2">
-          <img src="icons/twitter.svg" alt="Twitter Icon">
-        </a>
-        <a href="https://linkedin.com" target="_blank" class="mx-2">
-          <img src="icons/linkedin.svg" alt="Linkedin Icon">
-        </a>
+    </header>
+
+    <main id="main"></main>
+    <!--Dynamic data will be injected here-->
+
+    <footer class="bg-default flex flex-col">
+      <div id="extra-info" class="is-hidden">
+        <div class="flex flex-col items-center">
+          <img src="images/logo.svg" alt="Logo" class="w-20 mb-4" />
+          <p class="mb-7 w-full md:w-1/2 px-8 flex text-center">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor,
+            magna non tincidunt efficitur, metus metus congue elit, eget dictum
+            sem sapien vel odio. Proin sollicitudin mi vel mi sollicitudin, et
+            commodo nisi congue.
+          </p>
+        </div>
+        <div class="social justify-center pb-8">
+          <a href=" https://facebook.com" target="_blank" class="mx-2">
+            <img src="icons/facebook.svg" alt="Facebook Icon" />
+          </a>
+          <a href="https://instagram.com" target="_blank" class="mx-2">
+            <img src="icons/instagram.svg" alt="Instagram Icon" />
+          </a>
+          <a href="https://twitter.com" target="_blank" class="mx-2">
+            <img src="icons/twitter.svg" alt="Twitter Icon" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="mx-2">
+            <img src="icons/linkedin.svg" alt="Linkedin Icon" />
+          </a>
+        </div>
       </div>
-    </div>
 
-    <p class="flex py-6 justify-center">
-      &copy; <span id="currentYear" class="mr-1"></span>- Portfolio template. A free personal website by Renato
-      Lins
-    </p>
-  </footer>
+      <p class="flex py-6 justify-center">
+        &copy; <span id="currentYear" class="mr-1"></span>- Portfolio template.
+        A free personal website by Renato Lins
+      </p>
+    </footer>
 
-  <script type="module" defer src="scripts/main.js"></script>
-  <script type="module" defer src="scripts/router.js"></script>
-
-</body>
-
+    <script type="module" defer src="scripts/main.js"></script>
+    <script type="module" defer src="scripts/router.js"></script>
+  </body>
 </html>

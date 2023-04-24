@@ -1,0 +1,12 @@
+/* Layout */
+
+:root {
+  --max-page-width: 1280px;
+  --site-header-height: 8.63rem;
+}
+
+body {
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: min-content 1fr min-content;
+}

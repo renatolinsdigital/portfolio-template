@@ -2,7 +2,7 @@
 
 # Free portfolio template
 
-A customizable free template, perfect for creating personal or small business websites. Mainly based on just HTML, CSS, and Javascript, this template provides a hassle-free starting point for website creation. Enjoy!
+A customizable free template, perfect for creating personal or small business websites. Mainly based on just HTML, CSS, and Javascript, this template provides a hassle-free starting point for a personal website creation. Enjoy!
 
 ## What was used
 

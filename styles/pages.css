@@ -1,0 +1,32 @@
+/* Home */
+
+.home.page {
+  padding-top: var(--site-header-height);
+  background-color: var(--primary-dark-color);
+}
+
+.welcome {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  filter: contrast(0.9);
+  background-size: cover;
+  justify-content: center;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-image: url('../images/home-bg.jpg');
+  min-height: calc(100vh - var(--site-header-height));
+}
+
+body.is-home {
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+}
+
+body.is-home > header {
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  position: fixed;
+}
