@@ -1,8 +1,11 @@
 /* = TYPOGRAPHY = */
 
+/* We could define/import a custom font family here */
+
 html,
 body {
   font-size: 16px;
+  /* We could use a custom font family here */
 }
 
 /* = COLOR PALETTE = */

@@ -1,9 +1,5 @@
 /* Home */
 
-.home.page {
-  background-color: var(--primary-dark-color);
-}
-
 .welcome {
   flex: 1;
   display: flex;
@@ -15,6 +11,11 @@
   background-position: top;
   background-repeat: no-repeat;
   background-image: url('../images/home-bg.jpg');
+}
+
+.texts-container {
+  position: relative;
+  top: -60px;
 }
 
 body.is-home {
