@@ -25,3 +25,12 @@ window.addEventListener('load', function () {
   const currentYear = new Date().getFullYear();
   yearText.innerHTML = currentYear;
 });
+
+window.addEventListener('scroll', function () {
+  var header = document.getElementById('app-header');
+  if (window.scrollY > 0) {
+    header.classList.add('bg-dark');
+  } else {
+    header.classList.remove('bg-dark');
+  }
+});

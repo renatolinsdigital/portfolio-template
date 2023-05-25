@@ -1,3 +1,8 @@
+/* App header */
+#app-header {
+  transition: 0.4s ease all;
+}
+
 /* Drawer menu */
 
 #drawer-menu {
@@ -17,13 +22,13 @@
   transform: translateX(-300px);
 }
 
-.nav {
+#drawer-menu .nav {
   display: flex;
   user-select: none;
   flex-direction: column;
 }
 
-.nav a {
+#drawer-menu .nav a {
   font-size: 1.1rem;
   color: var(--snow2);
   padding: var(--px16) var(--px24);
