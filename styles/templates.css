@@ -1,0 +1,11 @@
+/* Header nav */
+
+#app-header-nav {
+  transition: 0.4s ease all;
+}
+
+/* Drawer menu */
+
+.credits {
+  border-top: 1px solid var(--tertiary-color);
+}
