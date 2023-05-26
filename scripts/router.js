@@ -1,6 +1,7 @@
 import routes from './routes.js';
 import * as data from '../data/index.js';
 import interpolate from './interpolate.js';
+import routerEvents from './router-events.js';
 
 const handleNavigation = async () => {
   // Getting the page html based on the route
@@ -14,19 +15,9 @@ const handleNavigation = async () => {
   const pageData = data[routeName];
   const parsedHtml = interpolate(html, pageData);
 
+  // Updating content and firing route updated event
   document.getElementById('root').innerHTML = parsedHtml;
-
-  // Dealing with classes that will impact home page only
-  const footerInfo = document.getElementById('footer-info');
-  footerInfo.classList.add('is-hidden');
-  document.body.classList.add('is-home');
-
-  if (routeName !== 'home') {
-    footerInfo.classList.remove('is-hidden');
-    document.body.classList.remove('is-home');
-  }
-  // Ps. In bigger apps, this type of code (related to a specific page of the app) should be manage within
-  // a state handling logic, not inside the router. I'll keep it here for the sake of simplicity
+  routerEvents.onRouteUpdated(routeName);
 };
 
 const route = event => {
@@ -38,6 +29,7 @@ const route = event => {
 };
 
 window.onpopstate = handleNavigation;
+
 handleNavigation();
 
 export default route;

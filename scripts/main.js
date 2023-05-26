@@ -6,15 +6,16 @@ const toggleNav = event => {
 };
 
 window.addEventListener('load', async function () {
-  // Injecting app layout templates
+  // Injecting app layout templates (templates outside routing)
   const placeHolders = document.querySelectorAll('[data-template]');
 
   for (const placeHolder of placeHolders) {
     const templateName = placeHolder.getAttribute('data-template');
-    const templateResponse = await fetch(`../templates/${templateName}.html`);
-    const templateText = await templateResponse.text();
+    const templatePath = `../app-templates/${templateName}.html`;
+    const templateHtml = await fetch(templatePath).then(data => data.text());
+
     const parser = new DOMParser();
-    const templateDoc = parser.parseFromString(templateText, 'text/html');
+    const templateDoc = parser.parseFromString(templateHtml, 'text/html');
     const template = templateDoc.querySelector('template');
     const templateContent = template.content.cloneNode(true);
     placeHolder.parentNode.replaceChild(templateContent, placeHolder);
@@ -34,7 +35,7 @@ window.addEventListener('load', async function () {
   links.forEach(link => link.addEventListener('click', route));
   links.forEach(link => link.addEventListener('click', toggleNav));
 
-  //Getting current year
+  //Getting current year for showing on footer
   const yearText = document.getElementById('currentYear');
   const currentYear = new Date().getFullYear();
   yearText.innerHTML = currentYear;
@@ -42,6 +43,7 @@ window.addEventListener('load', async function () {
 
 window.addEventListener('scroll', function () {
   var header = document.getElementById('app-header-nav');
+  if (!header) return;
   if (window.scrollY > 0) {
     header.classList.add('bg-dark');
   } else {

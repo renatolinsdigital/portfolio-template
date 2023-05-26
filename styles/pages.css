@@ -17,16 +17,3 @@
   position: relative;
   top: -60px;
 }
-
-body.is-home {
-  display: flex;
-  overflow: auto;
-  flex-direction: column;
-}
-
-body.is-home > header {
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  position: fixed;
-}
