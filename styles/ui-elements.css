@@ -59,12 +59,12 @@ a:hover {
   background-color: var(--primary-color);
 }
 
-.bg-dark {
-  background-color: var(--primary-dark-color);
-}
-
 .bg-alternative {
   background-color: var(--secondary-color);
+}
+
+.bg-dark {
+  background-color: var(--primary-dark-color);
 }
 
 /* = Structural helpers = */
@@ -73,8 +73,17 @@ a:hover {
   display: none;
 }
 
-.page-content-separator {
+.content-separator {
   width: 100%;
-  min-height: 100px;
-  background-color: red;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-separator.primary-dark path {
+  fill: var(--primary-dark-color);
+}
+
+.content-separator.inverted {
+  transform: scaleX(-1);
 }

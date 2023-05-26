@@ -1,25 +1,13 @@
 import route from './router.js';
+import templateInjector from './template-injector.js';
 
 const toggleNav = event => {
   const isHomeLink = event.target.closest('#logo-link');
   if (!isHomeLink) document.body.classList.toggle('open-menu');
 };
 
-window.addEventListener('load', async function () {
-  // Injecting app layout templates (templates outside routing)
-  const placeHolders = document.querySelectorAll('[data-template]');
-
-  for (const placeHolder of placeHolders) {
-    const templateName = placeHolder.getAttribute('data-template');
-    const templatePath = `../app-templates/${templateName}.html`;
-    const templateHtml = await fetch(templatePath).then(data => data.text());
-
-    const parser = new DOMParser();
-    const templateDoc = parser.parseFromString(templateHtml, 'text/html');
-    const template = templateDoc.querySelector('template');
-    const templateContent = template.content.cloneNode(true);
-    placeHolder.parentNode.replaceChild(templateContent, placeHolder);
-  }
+window.addEventListener('load', async () => {
+  await templateInjector();
 
   // Menu toggling actions
   const overlay = document.getElementById('overlay');
@@ -41,7 +29,7 @@ window.addEventListener('load', async function () {
   yearText.innerHTML = currentYear;
 });
 
-window.addEventListener('scroll', function () {
+window.addEventListener('scroll', () => {
   var header = document.getElementById('app-header-nav');
   if (!header) return;
   if (window.scrollY > 0) {
