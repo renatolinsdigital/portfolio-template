@@ -6,6 +6,72 @@
 
 /* Drawer menu */
 
+#drawer-menu {
+  top: 0;
+  z-index: 10;
+  width: 300px;
+  height: 100%;
+  right: -300px;
+  position: fixed;
+  will-change: transform;
+  transform: translateX(0);
+  transition: all 0.2s ease-in-out;
+  transition: transform 0.2s ease-out;
+}
+
+.open-menu #drawer-menu {
+  transform: translateX(-300px);
+}
+
+#drawer-menu .nav {
+  display: flex;
+  user-select: none;
+  flex-direction: column;
+}
+
+#drawer-menu .nav a {
+  font-size: 1.1rem;
+  color: var(--snow2);
+  padding: var(--px16) var(--px24);
+}
+
+#close-icon {
+  top: var(--px24);
+  right: var(--px24);
+  position: absolute;
+}
+
+#close-icon:hover img,
+#burger-icon:hover img {
+  filter: invert(20%);
+}
+
 .credits {
   border-top: 1px solid var(--tertiary-color);
+}
+
+/* Footer */
+
+.social {
+  display: flex;
+}
+
+.social a {
+  border-radius: 50%;
+  padding: var(--px12);
+  border: var(--px2) solid var(--white);
+}
+
+.social a:hover {
+  background-color: var(--white);
+}
+
+.social img,
+#close-icon img,
+#burger-icon img {
+  transition: all 0.2s ease;
+}
+
+.social a:hover img {
+  filter: invert(80%);
 }

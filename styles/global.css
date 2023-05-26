@@ -1,4 +1,4 @@
-/* App layout */
+/* = App layout = */
 
 :root {
   --max-page-width: 1280px;
@@ -7,6 +7,7 @@
 body {
   display: grid;
   overflow: hidden;
+  color: var(--snow2);
   grid-template-rows: min-content 1fr min-content;
 }
 
@@ -21,4 +22,25 @@ body.is-home > header {
   z-index: 1;
   width: 100%;
   position: fixed;
+}
+
+/* overlay */
+
+#overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 5;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  transition: 3s all ease;
+  animation: fadein 0.2s linear forwards;
+  background-color: var(--overlay-transparency);
+}
+
+.open-menu #overlay {
+  display: flex;
 }

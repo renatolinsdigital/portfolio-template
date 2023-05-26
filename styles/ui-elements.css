@@ -1,88 +1,80 @@
-/* Drawer menu */
+/* = Containers = */
 
-#drawer-menu {
-  top: 0;
-  z-index: 10;
-  width: 300px;
+.page,
+.container {
+  flex: 1;
+  width: 100%;
   height: 100%;
-  right: -300px;
-  position: fixed;
-  will-change: transform;
-  transform: translateX(0);
-  transition: all 0.2s ease-in-out;
-  transition: transform 0.2s ease-out;
-}
-
-.open-menu #drawer-menu {
-  transform: translateX(-300px);
-}
-
-#drawer-menu .nav {
   display: flex;
-  user-select: none;
+  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  max-width: var(--max-page-width);
 }
 
-#drawer-menu .nav a {
-  font-size: 1.1rem;
+.page.full,
+section.full {
+  padding: 0;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+/* = Texts = */
+
+.subtitle {
+  padding: 0.9rem;
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
+  color: var(--dirty-snow);
+  text-transform: uppercase;
+  border-bottom: 0.0625rem solid var(--dirty-snow);
+}
+
+.text-default {
   color: var(--snow2);
-  padding: var(--px16) var(--px24);
 }
 
-#close-icon {
-  top: var(--px24);
-  right: var(--px24);
-  position: absolute;
+.text-alternative {
+  color: var(--dirty-snow);
 }
 
-#close-icon:hover img,
-#burger-icon:hover img {
-  filter: invert(20%);
+/* = Links = */
+
+.menu-link:hover {
+  background-color: var(--secondary-color);
 }
 
-/* overlay */
-
-#overlay {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  z-index: 5;
-  display: none;
-  cursor: pointer;
-  position: fixed;
-  transition: 3s all ease;
-  animation: fadein 0.2s linear forwards;
-  background-color: var(--overlay-transparency);
-}
-
-.open-menu #overlay {
-  display: flex;
-}
-
-/* Social Links/Icons */
-
-.social {
-  display: flex;
-}
-
-.social a {
-  border-radius: 50%;
-  padding: var(--px12);
-  border: var(--px2) solid var(--white);
-}
-
-.social a:hover {
-  background-color: var(--white);
-}
-
-.social img,
-#close-icon img,
-#burger-icon img {
+a {
   transition: all 0.2s ease;
+  color: var(--accent-color-2);
 }
 
-.social a:hover img {
-  filter: invert(80%);
+a:hover {
+  filter: invert(10%);
+}
+
+/* = Color helpers = */
+
+.bg-default {
+  background-color: var(--primary-color);
+}
+
+.bg-dark {
+  background-color: var(--primary-dark-color);
+}
+
+.bg-alternative {
+  background-color: var(--secondary-color);
+}
+
+/* = Structural helpers = */
+
+.is-hidden {
+  display: none;
+}
+
+.page-content-separator {
+  width: 100%;
+  min-height: 100px;
+  background-color: red;
 }

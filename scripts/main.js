@@ -1,7 +1,7 @@
 import route from './router.js';
 
 const toggleNav = event => {
-  const isHomeLink = event.target.closest('#home-link');
+  const isHomeLink = event.target.closest('#logo-link');
   if (!isHomeLink) document.body.classList.toggle('open-menu');
 };
 
