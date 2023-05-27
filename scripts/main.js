@@ -23,7 +23,7 @@ window.addEventListener('load', async () => {
   links.forEach(link => link.addEventListener('click', route));
   links.forEach(link => link.addEventListener('click', toggleNav));
 
-  //Getting current year for showing on footer
+  //Gets current year for showing on footer
   const yearText = document.getElementById('currentYear');
   const currentYear = new Date().getFullYear();
   yearText.innerHTML = currentYear;

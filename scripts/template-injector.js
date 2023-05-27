@@ -2,17 +2,28 @@ const templateInjector = async () => {
   const placeHolders = document.querySelectorAll('[data-template]');
 
   for (const placeHolder of placeHolders) {
-    const templateName = placeHolder.getAttribute('data-template');
+    const templateName = placeHolder.dataset.template;
     const templatePath = `../templates/${templateName}.html`;
-    const templateHtml = await fetch(templatePath).then(data => data.text());
+    const templateHtml = await fetch(templatePath).then(response =>
+      response.text()
+    );
 
     if (placeHolder.parentNode) {
-      const parser = new DOMParser();
-      const templateDoc = parser.parseFromString(templateHtml, 'text/html');
+      const templateDoc = new DOMParser().parseFromString(
+        templateHtml,
+        'text/html'
+      );
       const template = templateDoc.querySelector('template');
       const templateContent = template.content.cloneNode(true);
-      // const childClass = placeHolder.getAttribute('data-child-class');
-      placeHolder.parentNode.replaceChild(templateContent, placeHolder);
+      const childClasses = placeHolder.dataset.childClasses;
+
+      if (childClasses) {
+        templateContent.firstElementChild.classList.add(
+          ...childClasses.split(' ')
+        );
+      }
+
+      placeHolder.replaceWith(templateContent);
     }
   }
 };
