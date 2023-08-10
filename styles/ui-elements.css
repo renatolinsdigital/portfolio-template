@@ -22,12 +22,12 @@ section.full {
 /* = Texts = */
 
 .subtitle {
+  position: relative;
   padding: 0.9rem;
   font-size: 1rem;
   letter-spacing: 0.4rem;
   color: var(--dirty-snow);
   text-transform: uppercase;
-  border-bottom: 0.0625rem solid var(--dirty-snow);
 }
 
 .text-default {
@@ -86,4 +86,21 @@ a:hover {
 
 .content-separator.inverted {
   transform: scaleX(-1);
+}
+
+.text-separator {
+  width: 100%;
+  position: relative;
+  height: var(--px32);
+}
+
+.text-separator:after {
+  top: 0;
+  left: 50%;
+  content: '';
+  width: var(--px60);
+  height: var(--px1);
+  position: absolute;
+  transform: translateX(-50%);
+  background-color: var(--tertiary-color);
 }

@@ -22,7 +22,7 @@ A customizable free template, perfect for creating personal or small business we
 
 ### Favicon
 
-If you want to generate a fav icon, upload a new image to favicon.io. Then download and replace icons in the __fav-icon__ folder
+If you want to generate a fav icon, upload a new image to __favicon.io__. Then download and replace icons in the __fav-icon__ folder
 
 ## Structure and organization - TBD
 
@@ -47,21 +47,21 @@ The theme of the website is defined in the __theme.css__ file. The file allows f
 
 * The file does not import any dependencies or use variables from other files, making it easily shareable between sites using the same approach.
 
-* The default font used is the Tailwind default font. If a different font is desired (such as Roboto), it can be easily imported by adding the following line to the file:
+* The default font used in this project is the Tailwind's default font. If a different font is desired, it can be easily imported within __theme.css__ by adding an import line such as this one:
 
-```@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');```
+```@import url('https://fonts.googleapis.com/css2?family=[FONT_NAME]&display=swap');```
 
-And then setting it as the font-family for the html and body elements:
+And then, we can set default font-family on the same file:
 
-```html, body { font-family: 'Roboto', sans-serif; }```
+```html, body { font-family: '[FONT_NAME]', sans-serif; }```
 
 ### Icons
 
-Icons are just regular .svg files with the 'fill' property matching overall color schema
+In this project, icons take the form of standard .svg files, offering us scalable vector-based images that perfectly suit our needs.
 
 ### How Tailwind CSS is used within this project
 
-We will be using Tailwind CSS in this project to minimize the amount of custom CSS required. While small projects can be styled with just CSS, Tailwind offers a set of pre-designed utility classes that can be easily applied for common styling tasks such as creating flexible containers, aligning elements, and adding padding. The default Tailwind font-family will be applied to the <html> element upon importing the framework, but any areas that require a different font can be overwritten as needed.
+Incorporating Tailwind CSS into this project will significantly reduce our reliance on custom CSS. While basic CSS suffices for smaller projects, Tailwind provides an array of pre-designed utility classes, streamlining common styling tasks like crafting adaptable containers, aligning elements precisely, and implementing padding with ease. The default Tailwind font-family will automatically be considered for our <html> element, but rest assured, we can effortlessly customize fonts as stated in this same documentation.
 
 ### Routing
 
