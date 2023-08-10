@@ -2,28 +2,35 @@ const templateInjector = async () => {
   const placeHolders = document.querySelectorAll('[data-template]');
 
   for (const placeHolder of placeHolders) {
-    const templateName = placeHolder.dataset.template;
-    const templatePath = `../templates/${templateName}.html`;
-    const templateHtml = await fetch(templatePath).then(response =>
-      response.text()
-    );
+    const { template, type = 'shared', childClasses } = placeHolder.dataset;
+    const templatePath = `../templates/${type}/${template}.html`;
 
-    if (placeHolder.parentNode) {
-      const templateDoc = new DOMParser().parseFromString(
-        templateHtml,
-        'text/html'
-      );
-      const template = templateDoc.querySelector('template');
-      const templateContent = template.content.cloneNode(true);
-      const childClasses = placeHolder.dataset.childClasses;
+    try {
+      const templateResponse = await fetch(templatePath);
 
-      if (childClasses) {
-        templateContent.firstElementChild.classList.add(
-          ...childClasses.split(' ')
+      if (templateResponse.ok) {
+        const templateHtml = await templateResponse.text();
+        const templateDoc = new DOMParser().parseFromString(
+          templateHtml,
+          'text/html'
         );
-      }
+        const templateContent = templateDoc
+          .querySelector('template')
+          .content.cloneNode(true);
 
-      placeHolder.replaceWith(templateContent);
+        if (childClasses) {
+          templateContent.firstElementChild.classList.add(
+            ...childClasses.split(' ')
+          );
+        }
+
+        placeHolder.replaceWith(templateContent);
+      } else {
+        placeHolder.replaceWith('Template not found');
+      }
+    } catch (err) {
+      placeHolder.replaceWith('Template injection error');
+      console.log(err);
     }
   }
 };

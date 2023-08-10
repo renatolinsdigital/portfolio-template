@@ -1,0 +1,36 @@
+/* Content separator */
+
+.content-separator {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.content-separator.primary-dark path {
+  fill: var(--primary-dark-color);
+}
+
+.content-separator.inverted {
+  transform: scaleX(-1);
+}
+
+/* Text separator */
+
+.text-separator {
+  width: 100%;
+  position: relative;
+  height: var(--px32);
+}
+
+.text-separator:after {
+  top: 0;
+  left: 50%;
+  content: '';
+  width: 100%;
+  height: var(--px1);
+  position: absolute;
+  max-width: var(--px80);
+  transform: translateX(-50%);
+  background-color: var(--tertiary-color);
+}

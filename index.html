@@ -13,16 +13,20 @@
     <title>My Portfolio Website</title>
 
     <!--Pay attention to the order that style sheets will be loaded, this will impact overrides-->
+
+    <!-- Shared styles -->
     <link rel="stylesheet" href="vendor/tailwind.min.css" />
-    <link rel="stylesheet" href="./styles/reset.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/variables.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/ui-elements.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/animations.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/theme.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/global.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/media-queries.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/app-templates.css" type="text/css" />
-    <link rel="stylesheet" href="./styles/pages.css" type="text/css" />
+    <link rel="stylesheet" href="./styles/shared/reset.css" />
+    <link rel="stylesheet" href="./styles/shared/variables.css" />
+    <link rel="stylesheet" href="./styles/shared/theme.css" />
+    <link rel="stylesheet" href="./styles/shared/ui-elements.css" />
+    <link rel="stylesheet" href="./styles/shared/animations.css" />
+    <link rel="stylesheet" href="./styles/shared/templates.css" />
+    <!-- Domain styles -->
+    <link rel="stylesheet" href="./styles/domain/global.css" />
+    <link rel="stylesheet" href="./styles/domain/media-queries.css" />
+    <link rel="stylesheet" href="./styles/domain/templates.css" />
+    <link rel="stylesheet" href="./styles/domain/pages.css" />
 
     <link
       sizes="180x180"
@@ -44,14 +48,14 @@
   <body class="is-home">
     <header id="app-header-container">
       <div id="overlay"></div>
-      <div data-template="app-header-nav"></div>
-      <div data-template="app-drawer-menu"></div>
+      <div data-template="app-header-nav" data-type="domain"></div>
+      <div data-template="app-drawer-menu" data-type="domain"></div>
     </header>
 
     <!--Dynamic data will be injected here-->
     <main id="root"></main>
 
-    <div data-template="app-footer"></div>
+    <div data-template="app-footer" data-type="domain"></div>
 
     <script type="module" defer src="scripts/main.js"></script>
     <script type="module" defer src="scripts/router.js"></script>
