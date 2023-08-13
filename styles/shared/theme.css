@@ -13,10 +13,11 @@ body {
 :root {
   /* identity */
   --primary-color: #1f2937;
+  --secondary-color: #3e5775;
   --tertiary-color: #7caab8;
+
   --accent-color-1: #ffc107;
   --accent-color-2: #00bcd4;
-  --secondary-color: #3e5775;
   --primary-dark-color: #111820;
 
   /* neutrals */
