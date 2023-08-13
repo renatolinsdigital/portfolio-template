@@ -1,5 +1,5 @@
 import templateInjector from './template-injector.js';
-import attachSharedScripts from './shared/index.js';
+import attachSharedScripts from '../shared/index.js';
 
 const routerEvents = {
   onRouteUpdated: routeName => {

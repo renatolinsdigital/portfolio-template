@@ -3,7 +3,7 @@ const templateInjector = async () => {
 
   for (const placeHolder of placeHolders) {
     const { template, type = 'shared', childClasses } = placeHolder.dataset;
-    const templatePath = `../templates/${type}/${template}.html`;
+    const templatePath = `../../templates/${type}/${template}.html`;
 
     try {
       const templateResponse = await fetch(templatePath);

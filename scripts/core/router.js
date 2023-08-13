@@ -1,5 +1,5 @@
 import routes from './routes.js';
-import * as data from '../data/index.js';
+import * as data from '../../data/index.js';
 import interpolate from './interpolate.js';
 import routerEvents from './router-events.js';
 
